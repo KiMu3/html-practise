@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/color.css">
+    <style>
+        *{word-break:keep-all;}
+    </style>
+</head>
+<body>
+    <a href target="_top"><input type="button" value="top" style="position: fixed; right:60px"></a>
+    <a href="0.1 Index.html"><input type="button" value="back" style="position: fixed; right:10px"></a>
+    <h1>
+        <span class="blue">1.2 시멘틱 마크업과 논리적인 순서 마크업
+        </span>
+    </h1>
+    <hr>
+    <h2 id="시멘틱">
+        <span class="blue"><sup>1.2.</sup>01 시멘틱 마크업(Semantic markup)</span>
+    </h2>
+    <hr>
+    <p>
+        시멘틱(Semantic)의 사전적 뜻은 '의미론적인' 정도로 해석할 수 있는데,
+        이것은 마크업을 할 때 의미에 부합하는 태그를 사용하라는 뜻입니다.
+    </p>
+    <p>
+        처음 마크업을 할 때는 "왜 시멘틱하게 마크업을 해야하지?"라는
+        의문이 들 수도 있습니다. HTML 문서들은 보통 시각적인 방법으로
+        사용자들에게 정보를 전달하지만, 모든 사람들이 정보를 동일하게 받아들일
+        수 있는 환경이 아닐 수도 있습니다. 예를 들어 시각장애인의 경우에는
+        HTML 문서의 콘텐츠 정보를 음성으로 전달해 주어야 하는데 이런 경우
+        전달하려는 태그의 의미가 적절해야 합니다.
+    </p>
+    <p>
+        다음의 예시를 보면서 설명하겠습니다.
+    </p>
+    <fieldset>
+        <legend style="text-align: right;">[예시 <span class="green">1-2</span>]</legend>
+<pre>
+    &lt;!DOCTYPE html&gt;</span><br>
+    &lt;html lang="ko"&gt;</span><br>
+    &lt;head&gt;<br>
+        &lt;meta charset="UTF-8"&gt;</span><br>
+        &lt;title&gt;시멘틱 마크업&lt;/title&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>
+        <span class="bgcyellow">반응형웹</span>
+
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br></pre>
+    </fieldset>
+    <p>
+        만약 '반응형웹'이 HTML 문서에서 제목으로 사용된다고 가정할
+        경우 <span class="green">[예시1-2]</span>처럼 마크업을 하면,
+        스크린 리더(음성낭독프로그램)에서는 그저 '반응형웹'이라고만 읽어주기
+        때문에 그 것이 제목인지를 알 수가 없습니다.
+    </p>
+    <p>
+        이 부분을 제목을 의미하는 태그로 바꾸어 마크업해 보도록 하겠습니다.
+    </p>
+    <fieldset class="예시왼쪽" style="margin-bottom: 10px;">
+        <legend style="text-align:right">[예시 <span class="green">1-3</span>]</legend>
+    <pre>
+    &lt;!DOCTYPE html&gt;</span><br>
+    &lt;html lang="ko"&gt;</span><br>
+    &lt;head&gt;<br>
+        &lt;meta charset="UTF-8"&gt;</span><br>
+        &lt;title&gt;시멘틱 마크업&lt;/title&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>
+            <span class="bgcyellow">&lt;h1&gt;반응형웹&lt;/h1&gt;</span>
+        
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br></pre>      
+    </fieldset>
+    <p>
+        <span class="green">[예시 1-3]</span>에서 &lt;h1&gt;은 문서의 첫 제목을 의미하는
+        태그입니다. 이 부분을 <b class="blue">'반응형웹' 헤딩 일</b>이라고 읽어 준다면
+        "아! 이 부분이 제목이구나."를 알 수 있게 됩니다.
+    </p>
+    <table class="t1">
+        <tr>
+            <td class="note"><b id="green">NOTE</b></td>
+        </tr>
+        <tr>
+            <td class="td1b">
+                실제 마크업을 할 때는 작업자마다 콘텐츠의 의미를 해석하는 차이가
+                조금 있을 수도 있지만 가급적 시멘틱하게 마크업을 하려고 노력하는 것이
+                중요합니다.
+            </td>
+        </tr>
+    </table><br>
+    <hr>
+    <h2 id="논리적">
+        <span class="blue"><sup>1.2.</sup>02 논리적 순서 마크업(Lofical sequence markup)</span>
+    </h2>
+    <hr>
+    <p>
+        시멘틱한 마크업과 함께 논리적인 순서에 의해 마크업을 하는 것도 매우 중요합니다.
+        다음 예시를 통해 그 이유를 알아보도록 하겠습니다.
+    </p>
+    <fieldset class="예시왼쪽" style="margin-bottom: 10px;">
+        <legend  style="text-align: right;">[예시 <span class="green">1-4</span>]</legend>
+        <table class="t2">
+            <tr>
+                <td class="td2">
+                    ① 공지사항   <span style="float: right;">② <input type="button" value="더보기"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="td2">
+                    <pre style="font-size: 15px;">
+③  [IT개발서] 애프터스킬 시리즈...
+    [취미실용] 반슈타인 클럽의...
+    세무회계수험서 출간 완료...
+    DIY 방탈출 시리즈 안내...
+    똑똑한 구매 현명한 조리...
+    HELLO KOREAN 시리즈...
+                    </pre>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <p>
+        <span class="green">[예시 1-4]</span>와 같은 디자인이 있을 때 어떤 순서로
+        마크업하는 것이 좋을까요?
+    </p>
+    <p>
+        아마도 그림에 표시된 번호 순서대로 마크업을 생각하는 사람도 있을
+        것입니다. 하지만 여기서는 내용에 대한 마크업 순서를 생각해 봐야 합니다.
+    </p>
+    <p>
+        예를 들어'① 공지사항 → ② 공지내용 더보기 → ③ 공지 내용들'의 순서 보다는
+        '① 공지사항 → ③ 공지 내용들 → ② 공지내용 더보기'가 내용 흐름 순서에 더 적합합니다.
+    </p>
+    <p style="margin-bottom: 100px;">
+        하나의 예를 더 보도록 하겠습니다.
+    </p>
+    <fieldset class="예시왼쪽" style="margin-bottom: 10px;">
+        <legend  style="text-align: right;">[예시 <span class="green">1-5</span>]</legend>
+        <table class="t1" style="width:285px;">
+            <tr>
+                <td class="td1b">①HTML5 ②CSS3</td>
+            </tr>
+            <tr>
+                <td class="td1b">③HTML5란? · QnA ④CSS3란? · QnA</td>
+            </tr>
+        </table>
+    </fieldset>
+    <p>
+        <span class="green">[예시 1-5]</span>와 같은 2단 메뉴를 마크업 할 때도
+        단순히 디자인만 본다면 ① → ② → ③ → ④의 순서가 맞아 보일 수도
+        있지만, 다음과 같은 순서로 마크업 하는 것이 더 논리적으로 맞다는 것을
+        알 수 있습니다.
+    </p>
+    <p>
+        ①(HTML5 메뉴) → ③(HTML5 서브메뉴) → ②(CSS3 메뉴) → ④(CSS3 서브메뉴)
+    </p>
+    <p>
+        이처럼 마크업을 할 때는 디자인의 시각적 흐름보다는 내용에 대한 논리적
+        흐름 순서를 잘 파악하여 마크업 하는 것이 무엇보다 중요합니다.
+    </p>
+    <table class="t1">
+        <tr>
+            <td class="note"><b id="green">NOTE</b></td>
+        </tr>
+        <tr>
+            <td class="td1b">
+                논리적 순서에 의한 마크업은 키보드(Tab키)나 터치패드와 같은 입력
+                장치만으로 HTML 문서의 모든 콘텐츠를 논리적 순서로 이동하여 사용할
+                수 있도록 하는 '입력장치 접근성'과 밀접한 관련이 있습니다.
+                따라서 마크업을 할 때 최대한 논리적 순서에 맞게 마크업하는 것이 중요합니다.
+                '웹 접근성'에 대한 구체적인 내용을 알고 싶다면 웹 접근성 연구소<a href="http://www.wah.or.kr" target="_blank">(http://www.wah.or.kr)</a>에서
+                제공하는 '한국형 웹 콘텐츠 접근성 지침 2.1 (KWCAG 2.1)'을 찹고하기 바랍니다.
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

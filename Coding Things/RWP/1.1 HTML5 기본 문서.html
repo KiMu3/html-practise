@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/color.css">
+    <style>
+        *{word-break:keep-all;}
+    </style>
+</head>
+<body>
+    <a href target="_top"><input type="button" value="top" style="position: fixed; right:60px"></a>
+    <a href="0.1 Index.html"><input type="button" value="back" style="position: fixed; right:10px"></a>
+    <h1>
+        <span class="blue" id="1.1">
+            1.1 HTML5 기본 문서
+        </span>
+    </h1>
+    <hr>
+    <h2 id="기본구성">
+        <span class="blue">
+            <sup>1.1.</sup>01 HTML5 기본 구성
+        </span>
+    </h2>
+    <hr>
+    <fieldset style="width: 40vw; margin-bottom: 10px;" class="예시왼쪽">
+        <legend>[예시 <span class="green">1-1</span>]</legend>
+    <pre>
+    <span class="bgcyellow">&lt;!DOCTYPE html&gt;</span><br>
+    &lt;html <span class="bgcyellow">lang="en"&gt;</span><br>
+    &lt;head&gt;<br>
+        &lt;meta <span class="bgcyellow">charset="UTF-8"&gt;</span><br>
+        &lt;title&gt;Document&lt;/title&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br>   
+    &lt;/body&gt;<br>
+    &lt;/html&gt;<br></pre>
+    </fieldset>
+    <p>
+        &lt;html&gt;,&lt;head&gt;,&lt;body&gt; 등과 같이 명령어의 형태가 '&lt;&gt;(각 괄호)'로 되어 있는 것을
+        <span class="blue">태그(tag)</span>라 하며, &lt;body&gt;~&lt;/body&gt;와 같이 태그의 시작
+        (&lt;&gt;)과 종료(/&lt;&gt;)를 하나의 <span class="blue">요소(element)</span>라고 합니다.
+        또 이러한 요소들로 코딩한 것을 <span class="blue">마크업(markup)</span>이라고 합니다.
+    </p>
+    <p>
+        <span class="green">[예시 1-1]</span>에서 첫줄에 DOCTYPE을 선언하였습니다.
+        이것은 작성된 HTML 문서의 형식을 브라우저에게 알려 줌으로써 태그/요소의 지원여부나
+        속성처리 기준을 통하여 브라우저가 HTML 문서의 내용을 올바르게 표시할 수 있도록
+        해줍니다. DOCTYPE 선언은 웹표준 문서의 기본이 되므로 반드시 선언해 주어야만 합니다.
+    </p>
+    <p>
+        <span class="blue">&lt;html&gt;</span> 요소는 <span class="blue">&lt;head&gt;</span> 요소와<span class="blue">&lt;body&gt;</span> 요소로
+        구성되어 있으며, &lt;head&gt; 요소 안에는 &lt;meta&gt;, &lt;title&gt;, &lt;link&gt;, &lt;style&gt;, &lt;script&gt; 등의 요소들이 올 수 있습니다.
+    </p>
+    <table class="t1">
+        <tr>
+            <td class="td1">요소명</td>
+            <td class="td1">설명</td>
+        </tr>
+        <tr>
+            <td class="td1a">&lt;meta&gt;</td>
+            <td class="td1a">&nbsp;&middot;&nbsp;HTML 문서의 설명, 키워드, 문서의 작성자 등을 지정합니다.</td>
+        </tr>
+        <tr>
+            <td class="td1a">&lt;title&gt;</td>
+            <td class="td1a">&nbsp;&middot;&nbsp;HTML 문서의 제목을 지정합니다.</td>
+        </tr>
+        <tr>
+            <td class="td1a">&lt;link&gt;</td>
+            <td class="td1a">&nbsp;&middot;&nbsp;외부의 CSS 파일을 HTML 문서에 연결할 때 사용합니다.</td>
+        </tr>
+        <tr>
+            <td class="td1a">&lt;style&gt;</td>
+            <td class="td1a">&nbsp;&middot;&nbsp;HTML 문서 내에서 스타일(CSS)을 정의합니다.<td>
+        </tr>
+        <tr>
+            <td class="td1a">&lt;script&gt;</td>
+            <td class="td1a">&nbsp;&middot;&nbsp;자바스크립트를 HTML 문서 내부에서 정의하거나 외부에서 자바스크립트 파일을
+                불러올때 사용합니다.</td>
+        </tr>
+    </table>
+    <p>
+        <span class="green">[예시 1-1]</span>에서 &lt;html <span class="blue">lang="ko"</span>&gt;나
+            &lt;meta <span class="blue">charset="UTF-8"</span>&gt;처럼 태그 내부에 부가적인 설정값을
+        선언하는 것을 <span class="blue">속성(attribute)</span>이라고 합니다.
+    </p>
+    <p>
+        <span class="blue">lang 속성은 HTML 문서에서 사용하는 언어</span>를 말하며
+        lang="ko"는 한국어, lang="en"은 영어를 의미합니다.
+        lang 속성이 중요한 이유는 시각 장애인들이 사용하는 스크린 리더
+        (음성낭독 프로그램)에서 언어 설정에 따라 다르게 읽어 주기 때문입니다.
+    </p>
+    <p>
+        예를 들어 1,2,3의 경우 lang="ko"로 설정하였다면 '일, 이, 삼'으로 읽어 주며,
+        lang="en"으로 설정하였다면 '원, 투, 쓰리'로 읽어 줍니다. 이러한 이유 
+        때문에 <span class="blue">lang 속성은 HTML 문서에서 꼭 정의해야 하는 속성</span>중에 
+        하나입니다. 만약, 주 언어를 'ko'로 설정하였는데 특정 부분에서 언어를 바꾸고
+        싶다면 해당하는 부분에만 lang 속성을 다른 언어로 지정할 수도 있습니다.
+    </p>
+    <fieldset>
+        &lt;i lang="de"&gt;Ich liebe dich&lt;/i&gt;
+    </fieldset>
+    <p>
+        &lt;meta&gt; 태그의 charset 속성의 값 UFT-8을 '문자 인코딩(charset)'방식이라고
+        하는데 <span class="blue">UFT-8의 경우</span> 거의 대부분의 문자를 처리 할 수 있기
+        때문에 <span class="blue">HTML5의 문자 인코딩 방식으로 주로 사용</span>되고
+        있습니다.
+    </p>
+    <p>
+        또, &lt;meta&gt; 태그에서 알아 두어야 할 속성 중에는 name 속성과 content 속성이 있는데,
+        나중에 학습하게 될 CSS 파트에서 반응형 웹 기술을 사용하기 위한 속성들입니다.
+    </p>
+    <fieldset>
+        &lt;meta charset="UTF-8"&gt;<br>
+        &lt;meta <spam class="bgcyellow">name="viewport"<br>
+        content="widh=device-width",initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"</spam>&gt;
+    </fieldset>
+    <p>
+        보통 '뷰포트'라고 하는데 모바일 해상도(가로보기, 세로보기)
+        에 맞게 HTML 문서를 조절해 주는 속성들 이라고 생각하면 될 것 같습니다.
+    </p>
+    <p>
+        참고로 HTML5 이전에 많이 사용한 XHTML 1.0 Transitional 버전도
+        있는데, XHTML 1.0 Transitional 버전의 DOCTYPE은 다음과 같습니다.
+    </p>
+    <fieldset>
+        &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transirional.dtd"&gt;
+    </fieldset>
+    <p>
+        XHTML 1.0 버전의 경우 HTML5보다 문법적으로 조금 더 엄격합니다.
+    </p>
+    <hr>
+    <h2 id="W3C">
+        <span class="blue">
+            <sup>1.1.</sup>02 W3C validator
+        </span>
+    </h2>
+    <hr>
+    <p>
+        W3C validator는 HTML 유효성 검사로 마크업에 대한 문법적 오류나 경고를
+        확인할 수 있습니다. 웹표준을 준수한 HTML 문서 작성에 가장 기본이 되는 사항이므로
+        마크업 중간이나 CSS에 들어가기 전에 꼭 확인해보고 넘어가야 합니다.
+    </p>
+    <p>
+        작성한 HTML 문서의 '문법 유효성 검사'는 
+        <a href="http://validator.w3.org" target="_blank">'http://validator.w3.org'</a>
+        에서 수행할 수 있습니다.
+    </p>
+    <p>
+        <img src="img/validator homepage.png" alt="validator homepage" class="homepage">
+    </p>
+    <p>
+        웹 문서가 서버에 있다면 'Validate by URL'을 이용하고, 본인 컴퓨터에
+        있다면 'Validate File Upload'를 이용하면 됩니다.
+    </p>
+    <b class="blue">
+        [문법 유효성 검사에 통과된 화면]
+    </b><br>
+    <span>
+        <img src="#" alt="문법 유효성 검사에 통과된 화면">
+    </span><br><br>
+    <b class="blue">
+        [문법 유효성 검사에 통과하지 못한 화면]
+    </b><br>
+    <span>
+        <img src="#" alt="문법 유효성 검사에 통과하지 못한 화면">
+    </span>
+    <hr>
+    <h2 id="마크업">
+        <span class="blue">
+            <sup>1.1.</sup>03 마크업 기본 문법 규칙
+        </span>
+    </h2>
+    <hr>
+    <p>
+        마크업을 할 때 기본적으로 알고 있어야 하는 문법 규칙은 다음과 같습니다.
+    </p>
+    <b>
+        <span class="pb">[1]</span> 요소는 시작 태그와 종료 태그가 있어야 합니다.
+    </b><br><br>
+    <table class="t3">
+        <tr>
+            <td class="td1a">
+                &lt;p&gt;요소는 시작 태그와 종료 태그가 있어야 한다.&lt;/p&gt;
+                <span class="green , right">O</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td1a">
+                &lt;p&gt;요소는 시작 태그와 종료 태그가 있어야 한다.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="red , right">
+                    X
+                </span>
+            </td>
+        </tr>
+    </table><br>
+    <b>
+        <span class="pb">[2]</span> 요소는 제대로 중첩되어야 합니다.
+    </b><br><br>
+    <table class="t3">
+        <tr>
+            <td class="td1a">
+                &lt;p&gt;중첩된 요소가 있을 때는 
+                <span class="bgcyellow">
+                    &lt;strong&gt;</span>바르게<span class="bgcyellow">&lt;/strong&gt;</span> 표현해야 한다.&lt;/p&gt;<span class="green , right">
+                    O
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td1a">
+                &lt;p&gt;중첩된 요소가 있을 때는
+                <span class="bgcyellow">
+                    &lt;strong&gt;</span>바르게<span class="bgcyellow">&lt;/p&gt;</span> 표현해야 한다.&lt;/strong&gt;&nbsp;&nbsp;&nbsp;<span class="red , right">X</span>
+            </td>
+        </tr>
+    </table>
+    <p>
+        마지막에 정의한 태그를 가장 먼저 닫아야 한다는 것인데, 이러한
+        중첩 관계를 부모와 자식 관계라고도 합니다. 여기에서는 &lt;p&gt; 태그가
+        요소가 부모 요소가 되고, &lt;strong&gt; 태그가 자식 요소가 됩니다.
+    </p>
+    <b>
+        <span class="pb">[3]</span> img 태그에는 alt 속성이 있어야 합니다.
+    </b><br><br>
+    <table class="t3">
+        <tr>
+            <td class="td1a">
+                &lt;<span class="bgcyellow">img</span>
+                 src="images/today.gif"<span class="bgcyellow">alt="오늘"</span><span class="green , right">O</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td1a">
+                &lt;img src="images/today.gif"&gt;<span class="red , right">X</span>
+            </td>
+        </tr>
+    </table><br>
+    <b>
+        <span class="pb">[4]</span> 권장하는 사항도 있습니다.
+    </b><br><br>
+    <table class="t3">
+        <tr>
+            <td class="td1a">
+                <span class="bgcyellow">&lt;p&gt;</span>태그나 속성은 소문자로 마크업 하는 것을 권장한다.<span class="bgcyellow">&lt;/p&gt;</span><span class="right">권장</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td1a">
+                &lt;P&gt;태그나 속성은 소문자로 마크업 하는 것을 권장한다.&lt;/P&gt;
+            </td>
+        </tr>
+        <tr>
+            <td class="td1a">
+                &lt;p <span class="bgcyellow">title="속성 값"&gt;</span>속성의 값에는 따옴표 처리를 권장한다.&lt;/p&gt;<span class="right">권장</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td1a">
+                &lt;p title=속성 값&gt;속성의 값에는 따옴표 처리를 권장한다.&lt;/p&gt;
+            </td>
+        </tr>
+    </table>
+    <p>
+        HTML5는 대소문자를 구분하지는 않지만 가급적 소문자로 통일해서
+        마크업하는 것과, 속성에 대한 값에 따옴표 처리하는 것을 권장합니다.
+    </p>
+    <b>
+        <span class="pb">[5]</span> 주석처리 방법
+    </b>
+    <p>
+        주석은 일반적으로 협업(공동작업)시 다음 작업자가 현재 작업한 내용을 쉽게 알아볼 수 있도록
+        도와주는 설명문이라고 보면 됩니다. 주석 내용은 브라우저 화면에 출력되지 않으며, 처리 방법은 다음과 같습니다.
+    </p>
+    <table class="t3">
+        <tr>
+            <td class="td1a">
+                <span class="bgcyellow">&lt;!--</span> header <span class="bgcyellow">--&gt;</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td1a">
+                <span class="bgcyellow">&lt;!--</span> 여기서부터 공지 사항입니다. <span class="bgcyellow">--&gt;</span>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
